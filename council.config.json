@@ -1,0 +1,116 @@
+{
+  "default_preset": "foundry-mixed",
+  "chat_default": {"provider": "foundry-openai", "model": "gpt-5.6-sol"},
+  "presets": {
+    "foundry-mixed": {
+      "title": "Two OpenAI models, four personas (Azure Foundry)",
+      "description": "GPT-6 Astra and GPT-5.6 Sol alternate across four lenses. Best for hard questions where a second model's judgment matters.",
+      "seats": [
+        {
+          "name": "The Skeptic",
+          "avatar": "skeptic",
+          "provider": "foundry-openai",
+          "model": "gpt-6-astra",
+          "persona": "A rigorous critic. You look for hidden assumptions, weak evidence, and failure modes. You are not contrarian for its own sake: when an argument survives your scrutiny you say so."
+        },
+        {
+          "name": "The Builder",
+          "avatar": "builder",
+          "provider": "foundry-openai",
+          "model": "gpt-5.6-sol",
+          "persona": "A pragmatic engineer and operator. You care about what actually works in practice, second-order effects, costs, and how a conclusion would be implemented or acted on."
+        },
+        {
+          "name": "The Historian",
+          "avatar": "historian",
+          "provider": "foundry-openai",
+          "model": "gpt-6-astra",
+          "persona": "You reason from precedent and base rates. You bring analogies from history, other fields, and prior attempts, and you point out when the present case genuinely differs from the past."
+        },
+        {
+          "name": "The Systems Thinker",
+          "avatar": "systems",
+          "provider": "foundry-openai",
+          "model": "gpt-5.6-sol",
+          "persona": "You map incentives, feedback loops, and the interests of every stakeholder. You ask who benefits, what changes over time, and where the equilibrium settles."
+        }
+      ],
+      "chairman": {
+        "provider": "foundry-openai",
+        "model": "gpt-6-astra",
+        "avatar": "chairman"
+      }
+    },
+    "single-model-personas": {
+      "title": "One OpenAI model, three personas (Azure Foundry)",
+      "description": "GPT-6 Astra argues from three different lenses. Cheaper, and isolates the effect of persona from the effect of model.",
+      "seats": [
+        {
+          "name": "The Skeptic",
+          "avatar": "skeptic",
+          "provider": "foundry-openai",
+          "model": "gpt-6-astra",
+          "persona": "A rigorous critic. You look for hidden assumptions, weak evidence, and failure modes. You are not contrarian for its own sake: when an argument survives your scrutiny you say so."
+        },
+        {
+          "name": "The Builder",
+          "avatar": "builder",
+          "provider": "foundry-openai",
+          "model": "gpt-6-astra",
+          "persona": "A pragmatic engineer and operator. You care about what actually works in practice, second-order effects, costs, and how a conclusion would be implemented or acted on."
+        },
+        {
+          "name": "The Historian",
+          "avatar": "historian",
+          "provider": "foundry-openai",
+          "model": "gpt-6-astra",
+          "persona": "You reason from precedent and base rates. You bring analogies from history, other fields, and prior attempts, and you point out when the present case genuinely differs from the past."
+        }
+      ],
+      "chairman": {
+        "provider": "foundry-openai",
+        "model": "gpt-6-astra",
+        "avatar": "chairman"
+      }
+    },
+    "openai-direct": {
+      "title": "OpenAI API direct (needs OPENAI_API_KEY)",
+      "description": "The same four lenses on OpenAI's public API instead of Azure Foundry. Disabled until OPENAI_API_KEY is configured.",
+      "seats": [
+        {
+          "name": "The Skeptic",
+          "avatar": "skeptic",
+          "provider": "openai",
+          "model": "gpt-5.1",
+          "persona": "A rigorous critic. You look for hidden assumptions, weak evidence, and failure modes."
+        },
+        {
+          "name": "The Builder",
+          "avatar": "builder",
+          "provider": "openai",
+          "model": "gpt-5.1",
+          "persona": "A pragmatic engineer and operator focused on what works in practice and how to act on the conclusion."
+        },
+        {
+          "name": "The Historian",
+          "avatar": "historian",
+          "provider": "openai",
+          "model": "gpt-5.1",
+          "persona": "You reason from precedent, base rates, and analogies from other fields."
+        },
+        {
+          "name": "The Systems Thinker",
+          "avatar": "systems",
+          "provider": "openai",
+          "model": "gpt-5.1",
+          "persona": "You map incentives, feedback loops, and stakeholder interests."
+        }
+      ],
+      "chairman": {
+        "provider": "openai",
+        "model": "gpt-5.1",
+        "avatar": "chairman"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+[Unit]
+Description=AI Council web application
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ai-council
+Group=ai-council
+WorkingDirectory=/opt/ai-council/current
+EnvironmentFile=/etc/ai-council/app.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/ai-council/current/.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8011 --workers 1 --no-proxy-headers
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+StateDirectory=ai-council
+StateDirectoryMode=0700
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/ai-council
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryMax=1G
+TasksMax=128
+
+[Install]
+WantedBy=multi-user.target

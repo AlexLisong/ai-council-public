@@ -1,0 +1,4 @@
+.seat-avatar { width: var(--avatar-size, 40px); height: var(--avatar-size, 40px); min-width: var(--avatar-size, 40px); flex-shrink: 0; border-radius: 50%; object-fit: cover; background: #e9eee7; border: 1px solid rgba(25,45,39,.07); vertical-align: middle; }
+.avatar-stack { display: flex; align-items: center; padding-left: 0; }
+.avatar-stack .seat-avatar + .seat-avatar { margin-left: -9px; }
+.avatar-stack .seat-avatar { border: 3px solid var(--surface, #fff); box-sizing: content-box; }

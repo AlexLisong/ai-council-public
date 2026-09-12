@@ -1,0 +1,41 @@
+.panel-setup { font-size: 13px; }
+.panel-setup.error { padding: 16px; background: #fff2ec; color: var(--danger); border-radius: 9px; }
+.setup-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 18px; }
+.setup-panel-choice { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.setup-panel-choice .eyebrow { font-size: 11px; }
+.setup-panel-choice label { min-width: 0; }
+.setup-panel-choice select { background: transparent; color: var(--ink); max-width: 330px; border: 0; font-size: 15px; font-weight: 600; margin-left: -3px; padding: 0 22px 0 0; text-overflow: ellipsis; cursor: pointer; }
+.panel-edit-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; padding: 7px 10px; min-height: 34px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--accent); font-size: 11px; font-weight: 550; white-space: nowrap; }
+.panel-edit-button:hover { background: var(--accent-soft); border-color: #ccc; }
+.panel-roster { display: flex; gap: 13px; margin-bottom: 20px; flex-wrap: wrap; }
+.panel-roster > a { display: flex; align-items: center; gap: 8px; min-width: 0; color: var(--ink); text-decoration: none; border-radius: 8px; padding: 3px 4px 3px 0; }
+.panel-roster > a:hover { background: #f3f3f3; }
+.panel-roster > a > span { display: flex; min-width: 0; max-width: 138px; flex-direction: column; gap: 3px; }
+.panel-roster strong { font-size: 11px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.panel-roster small { color: var(--muted); font-size: 11px; white-space: nowrap; }
+.panel-roster .chairman-chip { margin-left: auto; }
+.panel-roster .chairman-chip .seat-avatar { border-color: #aaa; }
+.setup-preferences { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; border-top: 1px solid var(--line); padding-top: 15px; }
+.pause-option { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--muted); cursor: pointer; }
+.pause-option input { margin: 0; width: 14px; height: 14px; }
+.pause-option small { display: inline; color: var(--muted); margin-left: 6px; font-size: 11px; }
+.setup-pause-option { padding: 2px 0; flex-wrap: wrap; }
+.discussion-settings { flex-shrink: 0; font-size: 11px; color: var(--muted); }
+.discussion-settings > summary { display: flex; align-items: center; justify-content: flex-end; gap: 6px; padding: 2px 0; cursor: pointer; list-style: none; }
+.discussion-settings > summary::-webkit-details-marker { display: none; }
+.discussion-settings[open] > summary svg:last-child { transform: rotate(180deg); }
+.setup-preferences:has(.discussion-settings[open]) { flex-wrap: wrap; }
+.discussion-settings[open] { flex: 1 0 100%; }
+.setup-advanced { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 15px; margin-top: 10px; background: #f6f6f6; border-radius: 9px; }
+.setup-advanced label { display: flex; flex-direction: column; gap: 7px; color: var(--ink); font-size: 11px; font-weight: 600; }
+.setup-advanced input, .setup-advanced select { padding: 9px 10px; border: 1px solid #ddd; border-radius: 6px; width: 100%; background: #fff; font-size: 12px; }
+.setup-advanced small { font-weight: 400; color: var(--muted); font-size: 11px; }
+.panel-update-notice { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px; margin-bottom: 12px; border-radius: 8px; background: var(--warning-soft); font-size: 12px; color: var(--warning); }
+.panel-unavailable-notice { color: var(--warning); font-size: 12px; margin: 10px 0; }
+@media (max-width: 1000px) { .panel-roster { gap: 12px; } .panel-roster > a { width: calc(33.333% - 10px); } .panel-roster .chairman-chip { margin-left: 0; } .pause-option small { display: none; } }
+@media (max-width: 700px) { .panel-roster { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; gap: 14px; margin-bottom: 12px; scrollbar-width: thin; } .panel-roster > a { flex: 0 0 auto; width: auto; } .panel-roster > a > span { max-width: 140px; } .setup-toolbar { gap: 8px; } .setup-panel-choice select { max-width: 190px; font-size: 13px; } .setup-preferences { flex-wrap: wrap; gap: 14px; } .setup-advanced { padding: 12px; gap: 10px; } }
+
+.replaced-note {
+  font-style: normal;
+  opacity: 0.75;
+}
